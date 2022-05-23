@@ -1,0 +1,83 @@
+
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+  .spacer {
+    flex: 1;
+  }
+
+  .content {
+    margin: 200px 200px;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(47, 51, 62);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    width: 70px;
+    margin: 0 16px;
+    background: transparent;
+  }
+
+  .toolbar #sair {
+    margin: 0 30px;
+    height: 50px;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+
+  }
+
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar">
+  <img
+    alt="LCCV logo"
+    src="../assets/Logo.png"
+  />
+  <span><b>Laboratório de Computação Científica e Visualização</b></span>
+    <div class="spacer"></div>
+    <a id = "sair" href="new/new.component.html" class="btn btn-sm" >Sair <br> <mat-icon>exit_to_app</mat-icon></a>
+</div>
+
+<div class="content">
+  <ul id = "lista" class="list-group">
+    <li class="list-group-item">Pessoas</li>
+    <li class="list-group-item"><br></li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-sm">Id</div>
+        <div class="col-sm">Nome</div>
+        <div class="col-sm">CPF</div>
+        <div class="col-sm">Nascimento</div>
+        <div class="col-sm">Email</div>
+        <div class="col-sm">Vínculo</div>
+        <div class="col-sm">Salário</div>
+        <div class="col-sm">Ativo</div>
+        <div class="col-sm">Ações</div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<router-outlet></router-outlet>
